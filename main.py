@@ -1,16 +1,23 @@
-from github import Github
+from gui.inicio import MiApp
+from updater import check_for_update
+import sys
+from updater import check_for_update
 
-g = Github()
 
-repo = g.get_repo("MiguelAngelDR/mi_proyecto")
+def main():
+    if getattr(sys, 'frozen', False):
+        check_for_update()
 
-print(f"Descripcion: {repo.description}")
-print(f"Creacion: {repo.created_at}")
+        print("hola! Esta es mi aplicacion ejecutandose desde un ejecutable")
+        input("presiona ENTER para salir...")
 
-release = repo.get_latest_release()
-print(f"Última versión: {release.tag_name}")
-print(f"Nombre del release: {release.title}")
+    if check_for_update():
+        print("Verificador actualizado correctamente")
+    else:
+        print("No se pudo actualizar el verificador")
 
-# Listar los archivos subidos (Assets) en ese release
-for asset in release.get_assets():
-    print(f"Archivo disponible: {asset.name} - URL: {asset.browser_download_url}")
+        app = MiApp()
+        app.mainloop()
+
+if __name__ == "__main__":
+    main()
