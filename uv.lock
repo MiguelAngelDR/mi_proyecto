@@ -212,7 +212,6 @@ source = { virtual = "." }
 dependencies = [
     { name = "customtkinter" },
     { name = "pygithub" },
-    { name = "pyinstaller" },
     { name = "requests" },
 ]
 
@@ -225,7 +224,6 @@ dev = [
 requires-dist = [
     { name = "customtkinter", specifier = ">=5.2.2" },
     { name = "pygithub", specifier = ">=2.8.1" },
-    { name = "pyinstaller", specifier = ">=6.17.0" },
     { name = "requests", specifier = ">=2.32.5" },
 ]
 
