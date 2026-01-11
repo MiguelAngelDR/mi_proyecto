@@ -1,4 +1,5 @@
 from github import Github
+from gui.inicio import MiApp
 
 g = Github()
 
@@ -14,3 +15,6 @@ print(f"Nombre del release: {release.title}")
 # Listar los archivos subidos (Assets) en ese release
 for asset in release.get_assets():
     print(f"Archivo disponible: {asset.name} - URL: {asset.browser_download_url}")
+
+app = MiApp()
+app.mainloop()

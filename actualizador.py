@@ -5,8 +5,8 @@ import subprocess
 from github import Github
 
 # --- CONFIGURACIÓN ---
-REPO_NOMBRE = "tu_usuario/tu_repositorio"  # Cámbialo por el tuyo
-VERSION_ACTUAL = "1.0.0"  # La versión que tiene este código
+REPO_NOMBRE = "MiguelAngelDR/mi_proyecto"  # Cámbialo por el tuyo
+VERSION_ACTUAL = "0.0.1"  # La versión que tiene este código
 
 
 # ---------------------
